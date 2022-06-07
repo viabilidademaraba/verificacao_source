@@ -144,7 +144,6 @@ class ApoioDialog extends StatelessWidget {
     );
   }
 
-  // TODO corrigir o posicionamento do texto
   sem_imagem(context) {
     return Column(
       mainAxisSize: MainAxisSize.min,

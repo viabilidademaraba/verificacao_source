@@ -39,7 +39,6 @@ class _Tela02State extends State<Tela02> {
               ),
             ),
             const Spacer(),
-            // TODO corrigir o valor que nao aparece de novo quando volta
             Expanded(
               flex: 2,
               child: PageView(
@@ -82,7 +81,6 @@ class _Tela02State extends State<Tela02> {
     }
   }
 
-  // TODO corrigir bug da verificacao da questao 11
   Row anteriorProxima() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,6 +101,16 @@ class _Tela02State extends State<Tela02> {
           callback: () {
             final resposta = widget.respostas[widget.actual_page];
             if (resposta == -1 || resposta == "" || resposta == null) {
+              showDialog(
+                context: context,
+                builder: (_) => ErrorDialog(
+                  message: "Por favor, preencha o campo!",
+                ),
+              );
+            } else if (widget.actual_page == 10 &&
+                widget.option2 == "" &&
+                widget.respostas[widget.actual_page] ==
+                    "Projetos de implantação, modificação, ampliação ou regularização de...") {
               showDialog(
                 context: context,
                 builder: (_) => ErrorDialog(
@@ -149,6 +157,16 @@ class _Tela02State extends State<Tela02> {
           callback: () {
             final resposta = widget.respostas[widget.actual_page];
             if (resposta == -1 || resposta == "" || resposta == null) {
+              showDialog(
+                context: context,
+                builder: (_) => ErrorDialog(
+                  message: "Por favor, preencha o campo!",
+                ),
+              );
+            } else if (widget.actual_page == 2 &&
+                widget.option1 == "" &&
+                widget.respostas[widget.actual_page] ==
+                    "Zona Urbana, em um dos Núcleos") {
               showDialog(
                 context: context,
                 builder: (_) => ErrorDialog(

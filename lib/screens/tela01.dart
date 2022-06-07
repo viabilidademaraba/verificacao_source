@@ -51,12 +51,51 @@ class Tela01 extends StatelessWidget {
                           );
                         },
                       ),
+                      const Spacer(),
                     ],
                     crossAxisAlignment: CrossAxisAlignment.start,
                   ),
                 ),
                 Expanded(child: Container(), flex: 2),
               ],
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Spacer(),
+                  Icon(Icons.design_services,
+                      color: Colors.grey.withOpacity(0.5)),
+                  const SizedBox(width: 8),
+                  Text(
+                    "UI Designer: Cristina Vitória",
+                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                  ),
+                  const SizedBox(width: 16),
+                  Icon(Icons.code, color: Colors.grey.withOpacity(0.5)),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Programador: Isac Galvão",
+                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                  ),
+                  const SizedBox(width: 16),
+                  Icon(Icons.person, color: Colors.grey.withOpacity(0.5)),
+                  const SizedBox(width: 8),
+                  Text(
+                    "Idealizadora: Mireli Lima",
+                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                  ),
+                  const Spacer(),
+                  Text(
+                    "Versão 1.0",
+                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

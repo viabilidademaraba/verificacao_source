@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:verificacao/screens/tela01.dart';
 import 'package:verificacao/utils/hexcolor.dart';
-import 'package:verificacao/widgets/button2.dart';
+import 'dart:math' as math;
 
 class SemLocalizacao extends StatelessWidget {
   const SemLocalizacao({Key? key}) : super(key: key);
@@ -15,7 +15,14 @@ class SemLocalizacao extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Spacer(),
-          Image.asset("assets/x.png"),
+          Transform.rotate(
+            angle: -math.pi / 4,
+            child: Icon(
+              Icons.add_circle_outline_sharp,
+              color: HexColor("#F91C1C"),
+              size: 250,
+            ),
+          ),
           const SizedBox(height: 32),
           Text(
             "Sem a localização do empreendimento não é possível realizar a verificação",
