@@ -95,7 +95,7 @@ class _Tela01State extends State<Tela01> {
                     ),
                     onHover: (value) => setState(() => widget._hover1 = value),
                     child: Text(
-                      "Cristina Vitória",
+                      "Cristina Leite",
                       style: TextStyle(
                         color: widget._hover1
                             ? Colors.white
