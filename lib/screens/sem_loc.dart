@@ -35,7 +35,7 @@ class SemLocalizacao extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () => Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => const Tela01(),
+                  builder: (context) => Tela01(),
                 ),
               ),
               child: Row(

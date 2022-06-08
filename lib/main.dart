@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Viabilidade Marabá",
       debugShowCheckedModeBanner: false,
-      home: const Tela01(),
+      home: Tela01(),
       theme: ThemeData(
         scrollbarTheme: ScrollbarThemeData(
           thumbColor: MaterialStateProperty.all(

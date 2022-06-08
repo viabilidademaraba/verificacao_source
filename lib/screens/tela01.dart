@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:verificacao/utils/hexcolor.dart';
 import 'package:verificacao/widgets/button1.dart';
 import 'package:verificacao/widgets/dialog.dart';
 
-class Tela01 extends StatelessWidget {
-  const Tela01({Key? key}) : super(key: key);
+class Tela01 extends StatefulWidget {
+  Tela01({Key? key}) : super(key: key);
 
+  bool _hover1 = false;
+  bool _hover2 = false;
+  bool _hover3 = false;
+
+  @override
+  State<Tela01> createState() => _Tela01State();
+}
+
+class _Tela01State extends State<Tela01> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -72,22 +83,76 @@ class Tela01 extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5)),
                   const SizedBox(width: 8),
                   Text(
-                    "UI Designer: Cristina Vitória",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                    "UI Designer: ",
+                    style: TextStyle(
+                      color: Colors.grey.withOpacity(0.5),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => launchUrl(
+                      Uri.parse(
+                          "https://www.linkedin.com/in/cristina-leite-493595166/"),
+                    ),
+                    onHover: (value) => setState(() => widget._hover1 = value),
+                    child: Text(
+                      "Cristina Vitória",
+                      style: TextStyle(
+                        color: widget._hover1
+                            ? Colors.white
+                            : Colors.grey.withOpacity(0.5),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 16),
                   Icon(Icons.code, color: Colors.grey.withOpacity(0.5)),
                   const SizedBox(width: 8),
                   Text(
-                    "Programador: Isac Galvão",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                    "Programador: ",
+                    style: TextStyle(
+                      color: Colors.grey.withOpacity(0.5),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => launchUrl(
+                      Uri.parse(
+                          "https://www.linkedin.com/in/isac-galv%C3%A3o-9b974114a"),
+                    ),
+                    onHover: (value) => setState(() => widget._hover2 = value),
+                    child: Text(
+                      "Isac Galvão",
+                      style: TextStyle(
+                        color: widget._hover2
+                            ? Colors.white
+                            : Colors.grey.withOpacity(0.5),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 16),
                   Icon(Icons.person, color: Colors.grey.withOpacity(0.5)),
                   const SizedBox(width: 8),
                   Text(
-                    "Idealizadora: Mireli Lima",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),
+                    "Idealizadora: ",
+                    style: TextStyle(
+                      color: Colors.grey.withOpacity(0.5),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => launchUrl(
+                      Uri.parse(
+                          'https://www.linkedin.com/in/mireli-lima-079a30159/'),
+                    ),
+                    onHover: (value) => setState(() => widget._hover3 = value),
+                    child: Text(
+                      "Mireli Lima",
+                      style: TextStyle(
+                        color: widget._hover3
+                            ? Colors.white
+                            : Colors.grey.withOpacity(0.5),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ),
                   const Spacer(),
                   Text(
